@@ -1,28 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Currrency Formatter</title>
-    <link rel="stylesheet" href="./style.css" />
+    <title>Currency Converter</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet-->
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="wrapper">
-      <div class="container">
-        <input type="text" id="amount" placeholder="amount" />
-        <button id="btn">Format</button>
+      <div class="app-details">
+        <img src="app-icon.svg" class="app-icon" />
+        <h1 class="app-title">Currency Converter</h1>
       </div>
-      <p id="output1">
-        <span>Indian Rupees:</span>
-      </p>
-      <p id="output2">
-        <span>US Dollars</span>
-      </p>
-      <p id="output3">
-        <span>Euro</span>
-      </p>
+      <label for="amount">Amount:</label>
+      <input type="number" id="amount" value="100" />
+      <div class="dropdowns">
+        <select id="from-currency-select"></select>
+        <select id="to-currency-select"></select>
+      </div>
+      <button id="convert-button">Convert</button>
+      <p id="result"></p>
     </div>
-    <script src="./script.js"></script>
+
+    <!-- Scipt With Array Of Supported Country Codes -->
+    <script src="currency-codes.js"></script>
+    <!-- Script with API Key -->
+    <script src="api-key.js"></script>
+    <!-- Script -->
+    <script src="script.js"></script>
   </body>
 </html>
